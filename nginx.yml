@@ -1,0 +1,15 @@
+---
+- name: installing nginx
+  hosts: web
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: installing
+      yum:
+       - name: nginx
+         state: present
+    - name: enabiling service
+      service:
+         - name: nginx
+           state: started
+           enabled: yes

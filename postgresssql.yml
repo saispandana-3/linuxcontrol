@@ -1,0 +1,11 @@
+---
+- name: installing postgreasssql
+  hosts: web
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: installing
+      yum:
+       name: postgresql-server
+       state: present
+    

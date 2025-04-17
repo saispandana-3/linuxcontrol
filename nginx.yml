@@ -5,9 +5,10 @@
   become: yes
   tasks:
     - name: Install Nginx
-      yum:
-        name: nginx
-        state: present
+      ansible.builtin.yum:
+                 name: nginx
+                 state: present
+                 use_backend: auto
 
     - name: Enable and start Nginx
       service:

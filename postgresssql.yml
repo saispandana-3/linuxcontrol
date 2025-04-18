@@ -7,5 +7,5 @@
     - name: installing
       yum:
        name: postgresql-server
-       state: present
+       state: absent
     
